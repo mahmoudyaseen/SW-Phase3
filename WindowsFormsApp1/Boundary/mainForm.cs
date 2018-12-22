@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//ARRAAAAAAAAAAAAAFaAAAAAAAAAA
+
 namespace WindowsFormsApp1.Boundary
 {
     public partial class mainForm : Form
@@ -19,10 +19,17 @@ namespace WindowsFormsApp1.Boundary
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
+            new SignInForm().ShowDialog();
+            this.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
+            new SignUpForm().ShowDialog();
+            this.Visible = true;
+
         }
     }
 }
